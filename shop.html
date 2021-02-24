@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules\bootstrap-icons\font\bootstrap-icons.css">
+  <link rel="stylesheet" href="owlcarousel\dist\assets\owl.carousel.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Lobster&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css\mian.css">
+</head>
+<body>
+
+<section class="header-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-6 col-lg-8 col-md-8 text-center">
+        <!-- <p class="company-logo">Shryam Wares</p> -->
+        <img class="company-logo" src="image\logo.png" alt="" onclick="location.href='#'">
+      </div>
+      <div class="col-lg-4 col-md-4">
+        <div class="fav_cart">
+          <div class="fav" onclick="location.href='#'">
+            <div class=" fav_box position-relative">
+              <i class="bi bi-heart"></i>
+              <span>100</span>
+            </div>
+            <p>Wishlist</p>
+          </div>
+          <div class="cart">
+            <div class=" cart_box position-relative" onclick="location.href='#'">
+              <i class="bi bi-bag"></i>
+              <span class="count">100</span>
+            </div>
+            <div class="cart_rs">
+              <p>Add to Cart</p>
+              <span>Rs.00.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  
+<section class="header2-bg">
+  <div class="container">
+    <div class="row">
+      <div class=" col-lg-5 col-md-6 col-10">
+        <div class="search">
+          <form class="search_form" action="">
+            <input  type="text" name="search" id="" placeholder="Search entire store here">
+            <div class="search_drop">
+              <select name="cars" id="cars">
+                <option>Catagories</option>
+                <option value="">woman and womans</option>
+                <option value="">child</option>
+                <option value="">electronics</option>
+              </select>
+            </div>
+            <button type="submit"><i class="bi bi-search"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 d-md-block d-none">
+        <div class="cat">
+          <button id="drop_link"><i class="bi bi-filter"></i> <span>Catagories</span></button>
+          <div class="cat_list" id="drop_links">
+            <ul>
+              <li><a href="">woman and womans</a></li>
+              <li><a href="">woman and womans</a></li>
+              <li><a href="">woman and womans</a></li>
+              <li><a href="">woman and womans</a></li>
+              <li><a href="">woman and womans</a></li>
+              <li><a href="">woman and womans</a></li>
+              <li><a href="">woman and womans</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-2  col-2 position-relative d-flex justify-content-center">
+        <div class="menu" id="menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="links2" >
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Shop</a></li>
+            <li><a href="">About us</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </div>
+        <div class="links" id="links">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Shop</a></li>
+            <li><a href="">About us</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+          <i class="bi bi-x" id="cancel"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="shop_head" >
+              <img src="" alt="">
+            <span>Home/</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12  pt-5">
+        <p class="bar_text">Riding Gear</p>
+        <hr>
+      </div>
+      <div class="col-lg-3">
+        <div class="shop_cat">
+          <div class="shop_cata_head" id="cat_box">
+            <p>Catagories</p> <i class="bi bi-plus"></i>
+          </div>
+          <div class="shop_cata_drop" id="cats">
+            <ul>
+              <li><a href="#">Man's Clothing</a></li>
+              <li><a href="#">Man's Clothing</a></li>
+              <li><a href="#">Man's Clothing</a></li>
+              <li><a href="#">Man's Clothing</a></li>
+              <li><a href="#">Man's Clothing</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="py-3 position-relative shop_filter_width">
+          <div class="shop_cata_head" id="filter-head">
+            <p>Filter</p>
+          </div>
+          <!-- this is filter form -->
+          <form class="shop_filter" id="filter-form">
+            <div class="shop_filter_range">
+              <p class="shop_filter_head">Price</p>
+              <input type="range" id="price-range" name="vol" min="0" max="1000000">
+              <div class="shop_filter_range_value py-3">
+                <span><span>Rs</span> <span>0</span></span>
+                <span>to</span>
+                <span><span>Rs</span> <span id="price_val">max</span></span>
+              </div>
+              <button class="filter_button" type="submit">Filter</button>
+            </div>
+            <div class="color">
+              <p class="shop_filter_head">Color</p>
+              <div class="color_box">
+                <input type="checkbox" name='color' value="name" id='color_name'>
+                <label for="color_name">color <span class="color_view" style="background: #0b38b5;"></span></label>
+              </div>
+              <div class="color_box">
+                <input type="checkbox" name='color' value="name" id='color_name1'>
+                <label for="color_name1">color <span class="color_view" style="background: #B50B3B;"></span></label>
+              </div>
+              <div class="color_box">
+                <input type="checkbox" name='color' value="name" id='color_name2'>
+                <label for="color_name2">color <span class="color_view" style="background: black;"></span></label>
+              </div>
+              <div class="color_box">
+                <input type="checkbox" name='color' value="name" id='color_name3'>
+                <label for="color_name3">color <span class="color_view" style="background: white;"></span></label>
+              </div>
+              <div class="color_box">
+                <input type="checkbox" name='color' value="name" id='color_name4'>
+                <label for="color_name4">color <span class="color_view" style="background: yellow;"></span></label>
+              </div>
+            </div>
+
+
+            <div class="color">
+              <p class="shop_filter_head">Size</p>
+              <div class="color_box">
+                <input type="checkbox" name='color' value="name" id='color_name'>
+                <label for="color_name">XXL</label>
+              </div>
+              <div class="color_box">
+                <input type="checkbox" name='color' value="name" id='color_name1'>
+                <label for="color_name1">XL</label>
+              </div>
+              <div class="color_box">
+                <input type="checkbox" name='color' value="name" id='color_name2'>
+                <label for="color_name2">L</label>
+              </div>
+              <div class="color_box">
+                <input type="checkbox" name='color' value="name" id='color_name3'>
+                <label for="color_name3">M</label>
+              </div>
+              <div class="color_box">
+                <input type="checkbox" name='color' value="name" id='color_name4'>
+                <label for="color_name4">S</label>
+              </div>
+            </div>
+
+            <div class="color">
+              <p class="shop_filter_head">Year</p>
+              <div class="color_box">
+                <input type="checkbox" name='color' value="name" id='color_name'>
+                <label for="color_name">1 month - 3 month</label>
+              </div>
+              <div class="color_box">
+                <input type="checkbox" name='color' value="name" id='color_name1'>
+                <label for="color_name1">4 month - 1 year</label>
+              </div>
+              <div class="color_box">
+                <input type="checkbox" name='color' value="name" id='color_name2'>
+                <label for="color_name2">1 month - 2 year</label>
+              </div>
+              <div class="color_box">
+                <input type="checkbox" name='color' value="name" id='color_name3'>
+                <label for="color_name3">3 month - 5 year</label>
+              </div>
+            </div>
+
+            <button class="filter_submit" type="submit">Submit</button>
+            <button class="filter_reset" type="submit">Reset</button>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-9 py-md-5">
+        <div class="product">
+          <div class="product_box product-shop">
+            <div class="product_img" onclick="location.href='#'">
+              <img src="image\shoes.jfif" alt="">
+              <span class="product_img_discount">100% off</span>
+            </div>
+            <div class="product_name" onclick="location.href='#'">
+              <p>Product name</p>
+            </div>
+            <div class="product_info">
+              <span class="product_info_cut">Rs. 300000</span>
+              <span class="product_info_price">Rs. 300000</span>
+              <span class="product_info_discount">100% off</span>
+            </div>
+            <div class="product_buy">
+              <button onclick="location.href='#'">Buy</button>
+            </div>
+          </div>
+          <div class="product_box product-shop">
+            <div class="product_img" onclick="location.href='#'">
+              <img src="image\shoes.jfif" alt="">
+              <span class="product_img_discount">100% off</span>
+            </div>
+            <div class="product_name" onclick="location.href='#'">
+              <p>Product name</p>
+            </div>
+            <div class="product_info">
+              <span class="product_info_cut">Rs. 300000</span>
+              <span class="product_info_price">Rs. 300000</span>
+              <span class="product_info_discount">100% off</span>
+            </div>
+            <div class="product_buy">
+              <button onclick="location.href='#'">Buy</button>
+            </div>
+          </div>
+          <div class="product_box product-shop">
+            <div class="product_img" onclick="location.href='#'">
+              <img src="image\shoes.jfif" alt="">
+              <span class="product_img_discount">100% off</span>
+            </div>
+            <div class="product_name" onclick="location.href='#'">
+              <p>Product name</p>
+            </div>
+            <div class="product_info">
+              <span class="product_info_cut">Rs. 300000</span>
+              <span class="product_info_price">Rs. 300000</span>
+              <span class="product_info_discount">100% off</span>
+            </div>
+            <div class="product_buy">
+              <button onclick="location.href='#'">Buy</button>
+            </div>
+          </div>
+          <div class="product_box product-shop">
+            <div class="product_img" onclick="location.href='#'">
+              <img src="image\shoes.jfif" alt="">
+              <span class="product_img_discount">100% off</span>
+            </div>
+            <div class="product_name" onclick="location.href='#'">
+              <p>Product name</p>
+            </div>
+            <div class="product_info">
+              <span class="product_info_cut">Rs. 300000</span>
+              <span class="product_info_price">Rs. 300000</span>
+              <span class="product_info_discount">100% off</span>
+            </div>
+            <div class="product_buy">
+              <button onclick="location.href='#'">Buy</button>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section>
+  <div class="container">
+    <div class="row position-relative">
+      <div class="col-md-12 pt-5">
+        <p class="bar_text">Riding Gear</p>
+        <hr>
+      </div>
+      <div class="col-md-12  py-md-5">
+        <div class="product owl-carousel owl-theme" id="product-slide">
+          <div class="product_box ">
+            <div class="product_img" onclick="location.href='#'">
+              <img src="image\shoes.jfif" alt="">
+              <span class="product_img_discount">100% off</span>
+            </div>
+            <div class="product_name" onclick="location.href='#'">
+              <p>Product name</p>
+            </div>
+            <div class="product_info">
+              <span class="product_info_cut">Rs. 300000</span>
+              <span class="product_info_price">Rs. 300000</span>
+              <span class="product_info_discount">100% off</span>
+            </div>
+            <div class="product_buy">
+              <button onclick="location.href='#'">Buy</button>
+            </div>
+          </div>
+  
+          <div class="product_box">
+            <div class="product_img" onclick="location.href='#'">
+              <img src="image\background imgae.jpg" alt="">
+              <span class="product_img_discount">100% off</span>
+            </div>
+            <div class="product_name" onclick="location.href='#'">
+              <p>Product name</p>
+            </div>
+            <div class="product_info">
+              <span class="product_info_cut">Rs. 300000</span>
+              <span class="product_info_price">Rs. 300000</span>
+              <span class="product_info_discount">100% off</span>
+            </div>
+            <div class="product_buy">
+              <button onclick="location.href='#'">Buy</button>
+            </div>
+          </div>
+          <div class="product_box">
+            <div class="product_img" onclick="location.href='#'">
+              <img src="image\shoes.jfif" alt="">
+              <span class="product_img_discount">100% off</span>
+            </div>
+            <div class="product_name" onclick="location.href='#'">
+              <p>Product name</p>
+            </div>
+            <div class="product_info">
+              <span class="product_info_cut">Rs. 300000</span>
+              <span class="product_info_price">Rs. 300000</span>
+              <span class="product_info_discount">100% off</span>
+            </div>
+            <div class="product_buy">
+              <button onclick="location.href='#'">Buy</button>
+            </div>
+          </div>
+          <div class="product_box">
+            <div class="product_img" onclick="location.href='#'">
+              <img src="image\shoes.jfif" alt="">
+              <span class="product_img_discount">100% off</span>
+            </div>
+            <div class="product_name" onclick="location.href='#'">
+              <p>Product name</p>
+            </div>
+            <div class="product_info">
+              <span class="product_info_cut">Rs. 300000</span>
+              <span class="product_info_price">Rs. 300000</span>
+              <span class="product_info_discount">100% off</span>
+            </div>
+            <div class="product_buy">
+              <button onclick="location.href='#'">Buy</button>
+            </div>
+          </div>
+          <div class="product_box">
+            <div class="product_img" onclick="location.href='#'">
+              <img src="image\shoes.jfif" alt="">
+              <span class="product_img_discount">100% off</span>
+            </div>
+            <div class="product_name" onclick="location.href='#'">
+              <p>Product name</p>
+            </div>
+            <div class="product_info">
+              <span class="product_info_cut">Rs. 300000</span>
+              <span class="product_info_price">Rs. 300000</span>
+              <span class="product_info_discount">100% off</span>
+            </div>
+            <div class="product_buy">
+              <button onclick="location.href='#'">Buy</button>
+            </div>
+          </div>
+          <div class="product_box">
+            <div class="product_img" onclick="location.href='#'">
+              <img src="image\shoes.jfif" alt="">
+              <span class="product_img_discount">100% off</span>
+            </div>
+            <div class="product_name" onclick="location.href='#'">
+              <p>Product name</p>
+            </div>
+            <div class="product_info">
+              <span class="product_info_cut">Rs. 300000</span>
+              <span class="product_info_price">Rs. 300000</span>
+              <span class="product_info_discount">100% off</span>
+            </div>
+            <div class="product_buy">
+              <button onclick="location.href='#'">Buy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="news_bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="news">
+          <p class="news_head">Sign up for Newsletter</p>
+          <p class="news_sub">..and receive %20 coupon for first shopping.</p>
+        </div>  
+      </div>
+      <div class="col-md-6">
+        <form action="" class="news_form">
+          <input type="email" name="email" id=""  placeholder="Enter your eamil for alert">
+          <button type="submit">Subscribe</button>
+        </form>  
+      </div>
+    </div>
+  </div>
+</section>
+<section class="news_bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <p class="footer_logo">Shryam Wares</p>
+        <p class="footer_desc">Serves High Quality Products At Your Doorstep.</p>
+        <p class="footer_number">+977-0000000</p>
+        <p class="footer_location">Bhaktapur, Nepal</p>
+        <!-- <div class="footer_media">  
+
+            <i class="bi bi-facebook"></i>
+         
+            <i class="bi bi-twitter"></i>
+         
+            <i class="bi bi-instagram"></i>
+         
+            <i class="bi bi-google"></i>
+         
+            <i class="bi bi-youtube"></i>
+
+        </div> -->
+      </div>
+      <div class="col-md-3">
+        <div class="footer_cat">
+          <p class="footer_cat_head">Catagories</p>
+          <ul class="footer_links">
+            <li><a href="">unisex</a></li>
+            <li><a href="">male</a></li>
+            <li><a href="">female</a></li>
+            <li><a href="">child</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="footer_cat">
+          <p class="footer_cat_head">Links</p>
+          <ul class="footer_links">
+            <li><a href="">unisex</a></li>
+            <li><a href="">male</a></li>
+            <li><a href="">female</a></li>
+            <li><a href="">child</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <p class="footer_cat_head">our Media</p>
+        <div class="footer_media">  
+
+          <i class="bi bi-facebook"></i>
+       
+          <i class="bi bi-twitter"></i>
+       
+          <i class="bi bi-instagram"></i>
+       
+          <i class="bi bi-google"></i>
+       
+          <i class="bi bi-youtube"></i>
+
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section >
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p class="copy">Copyright ©2021 All rights reserved by Gusto and developed by Gusto Infosys</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script src="node_modules\jquery\dist\jquery.min.js"></script>
+<script src="node_modules\bootstrap\dist\js\bootstrap.min.js"></script>
+<script src="easytimer.js-master\dist\easytimer.min.js"></script>
+<script src="owlcarousel\dist\owl.carousel.min.js"></script>
+<script src="js\main.js"></script>
+<script>
+  
+  var timer = new easytimer.Timer({ countdown: true, startValues: { seconds: 5 } });
+
+  timer.start({ startValues: {hours: 0,minutes: 0,seconds: 10 }, target: { seconds: 0 } });
+  $('#defaultParamsExample .values').html(timer.getTimeValues().toString());
+
+  timer.addEventListener('secondsUpdated', function (e) {
+    $('#defaultParamsExample .values').html(timer.getTimeValues().toString());
+  });
+
+  timer.addEventListener('targetAchieved', function (e) {
+    $('#defaultParamsExample .values').html('Offer ended');
+  });
+</script>
+</body>
+</html>
